@@ -51,38 +51,39 @@ export default function Home() {
   return (
     <>
       {/* Hero section */}
-      <section className="bg-[#004f44] mt-16 py-12 relative headerImages  ">
-        <div className=" px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-          {/* Text Section */}
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-              Shop Smart. <span className="text-orange-500">Live Better.</span>
-            </h1>
+<section className="bg-[#004f44] mt-16 py-12 relative headerImages">
+  <div className="px-6 py-16 flex flex-col md:flex-row gap-10 items-center">
+    
+    {/* Text Section */}
+    <div className="order-2 md:order-1 text-center md:text-left">
+      <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+        Shop Smart. <span className="text-orange-500">Live Better.</span>
+      </h1>
 
-            <p className="mt-4 text-warning-soft/85 text-lg">
-              Discover thousands of products at the best prices. Fast delivery,
-              secure payment, and amazing deals every day.
-            </p>
+      <p className="mt-4 text-warning-soft/85 text-lg">
+        Discover thousands of products at the best prices. Fast delivery,
+        secure payment, and amazing deals every day.
+      </p>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Link to="/contact">
-                {" "}
-                <button className="bg-[#004f44] hover:text-[#004f44] hover:bg-white/90 duration-300 transition ease-in shadow-md border border-white/50 text-white px-6 py-3 rounded-lg cursor-pointer">
-                  Contact Us
-                </button>{" "}
-              </Link>
-            </div>
-          </div>
+      <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <Link to="/contact">
+          <button className="bg-[#004f44] hover:text-[#004f44] hover:bg-white/90 duration-300 shadow-md border border-white/50 text-white px-6 py-3 rounded-lg cursor-pointer">
+            Contact Us
+          </button>
+        </Link>
+      </div>
+    </div>
 
-          {/* Image Section */}
-          <div className="flex justify-center">
-            <img
-              src={imgHeader}
-              className="w-full max-w-md md:max-w-lg rounded-b-3xl rounded-t-full shadow-md shadow-[#0b6459]  "
-            />
-          </div>
-        </div>
-      </section>
+    {/* Image Section */}
+    <div className="order-1 md:order-2 flex justify-center">
+      <img
+        src={imgHeader}
+        className="w-full max-w-md md:max-w-lg rounded-b-3xl rounded-t-full shadow-md shadow-[#0b6459]"
+      />
+    </div>
+
+  </div>
+</section>
 
       <CategorySlider />
 
