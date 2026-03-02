@@ -36,10 +36,10 @@ const schema = zod
     dateOfBirth: zod.coerce
       .date("Invalid date")
       .refine(function (value) {
-        return new Date().getFullYear() - value.getFullYear() >= 18
+        return new Date().getFullYear() - value.getFullYear() >= 12
           ? true
           : false;
-      }, " Age must be 18 or above ")
+      }, " Age must be 12 or above ")
       .transform(function (dateObj) {
         return ` ${dateObj.getDate()}-${dateObj.getMonth() + 1}-${dateObj.getFullYear()} `;
       }),
