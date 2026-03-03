@@ -12,14 +12,14 @@ export default function Footer() {
   }
 
   return (
-    <>
+
       <footer className="bg-[#004f44] text-white mt-16 bottom-0">
         <div className="container mx-auto px-6 py-10 grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold mb-3">BuyNest</h2>
             <p className="text-gray-400">
-              BuyNest – Your smart place to find everything you need at great
+              BuyNest - Your smart place to find everything you need at great
               prices.
             </p>
           </div>
@@ -37,6 +37,14 @@ export default function Footer() {
                   </li>
                   <li>
                     <NavLink
+                      to="/category"
+                      className=" hover:text-[#ffa600db] "
+                    >
+                      Category
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
                       to="/wishlist"
                       className=" hover:text-[#ffa600db] "
                     >
@@ -49,12 +57,12 @@ export default function Footer() {
                     </NavLink>
                   </li>
                   <li>
-                    <span
+                    <button
                       onClick={handleLogout}
-                      className="block hover:text-red-600 duration-200 transition ease-in cursor-pointer w-fit py-2 px-3  rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:bg-transparent"
+                      className="block hover:text-red-600 duration-200 transition ease-in cursor-pointer w-fit"
                     >
                       Logout
-                    </span>
+                    </button>
                   </li>
                 </>
               )}
@@ -84,27 +92,25 @@ export default function Footer() {
             <h3 className="font-semibold mb-3">Customer Service</h3>
             <ul className="space-y-2 text-gray-400">
               {token && (
-                <>
-                  {" "}
+
                   <li>
                     <NavLink to="/contact" className=" hover:text-[#ffa600db] ">
                       Contact Us
                     </NavLink>
-                  </li>{" "}
-                </>
+                  </li>
+
               )}
 
               <li>FAQ</li>
 
               {token && (
-                <>
-                  {" "}
+
                   <li>
                     <NavLink to="/" className=" hover:text-[#ffa600db] ">
                       Returns
                     </NavLink>
-                  </li>{" "}
-                </>
+                  </li>
+
               )}
             </ul>
           </div>
@@ -122,6 +128,5 @@ export default function Footer() {
           © 2026 BuyNest. All rights reserved.
         </div>
       </footer>
-    </>
   );
 }
